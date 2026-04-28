@@ -8,7 +8,6 @@ import com.example.spring_todo_app.entity.Todo;
 import java.util.List;
 
 public interface TodoRepository extends JpaRepository<Todo, Long> {
-    
-    public List<TodoDtoResponse> getAll();
-    
+
+
 }
