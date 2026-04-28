@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-todo-app
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    format-sql: true
+
+  datasource:
+    url: ${DB_URL:jdbc:h2:mem:todo-db}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:}
+    driverClassName: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 7000
